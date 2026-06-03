@@ -4,11 +4,72 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — /BRAG</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-  <!-- PEOPLE_DATA -->
-  <h1>About /BRAG</h1>
-  <p>Coming soon.</p>
+<body class="min-h-screen">
+  <main class="max-w-2xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <header class="text-center mb-16">
+      <a href="./index.html" class="font-heading font-black text-6xl md:text-7xl tracking-tight brag-gradient drop-shadow-[0_0_40px_rgba(244,162,97,0.3)] inline-block">
+        /BRAG
+      </a>
+    </header>
+
+    <!-- Content -->
+    <article class="space-y-12">
+      <section>
+        <h2 class="font-heading font-bold text-3xl text-white mb-4">What is a brag page?</h2>
+        <p class="text-brag-text-muted leading-relaxed">
+          Most websites have an <strong class="text-brag-text">/about</strong> page that tells you someone's background.
+          Some have a <strong class="text-brag-text">/now</strong> page that tells you what they're focused on right now.
+        </p>
+        <p class="text-brag-text-muted leading-relaxed mt-4">
+          A <strong class="text-brag-text">/brag</strong> page is where you share what you're proud of — your wins,
+          your projects, your journey. It's a public reminder of what you've accomplished and what you're capable of.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-heading font-bold text-3xl text-white mb-4">Why have one?</h2>
+        <ul class="space-y-3 text-brag-text-muted">
+          <li class="flex gap-3">
+            <span class="text-brag-orange">→</span>
+            <span>It's a confidence boost — writing down your wins reminds you of your progress.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brag-orange">→</span>
+            <span>It's a conversation starter — visitors to your site learn what you care about.</span>
+          </li>
+          <li class="flex gap-3">
+            <span class="text-brag-orange">→</span>
+            <span>It's a public commitment — declaring your priorities helps you stay focused.</span>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="font-heading font-bold text-3xl text-white mb-4">How do I get listed?</h2>
+        <p class="text-brag-text-muted leading-relaxed mb-4">
+          /BRAG is a community-curated directory. To add your brag page:
+        </p>
+        <ol class="space-y-3 text-brag-text-muted list-decimal list-inside">
+          <li>Create a /brag page on your personal website.</li>
+          <li>
+            <a href="https://github.com/mkasberg/slash-brag" target="_blank" class="text-brag-orange hover:underline">Fork this repo on GitHub</a>.
+          </li>
+          <li>Add your info to <code class="bg-brag-card px-1.5 py-0.5 rounded text-sm text-brag-text">data/people.json</code>.</li>
+          <li>Add your photo to <code class="bg-brag-card px-1.5 py-0.5 rounded text-sm text-brag-text">public/images/people/</code> (named <code class="bg-brag-card px-1.5 py-0.5 rounded text-sm text-brag-text">{key}.jpg</code>).</li>
+          <li>Open a pull request.</li>
+        </ol>
+      </section>
+    </article>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-brag-card-border text-center text-brag-text-dim text-sm">
+      <a href="./index.html" class="text-brag-orange hover:underline">Home</a>
+      <span class="mx-2">·</span>
+      <a href="https://github.com/mkasberg/slash-brag" target="_blank" class="text-brag-orange hover:underline">GitHub</a>
+    </footer>
+  </main>
 </body>
 </html>
