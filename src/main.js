@@ -26,18 +26,21 @@ function render(entries) {
     card.target = '_blank';
     card.className = 'block bg-brag-card border border-brag-card-border rounded-2xl p-6 transition-all duration-200 hover:border-brag-orange hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(244,162,97,0.15)]';
 
-    const imgPath = `/images/people/${person.key}.jpg`;
+    const imgPath = person.image ? `/images/people/${person.image}` : null;
     const location = [person.city, person.state, person.country].filter(Boolean).join(', ');
+
+    const showFallback = !imgPath ? 'hidden' : '';
+    const fallbackDisplay = !imgPath ? 'flex' : 'hidden';
 
     card.innerHTML = `
       <div class="flex items-center gap-4 mb-3">
         <img
-          src="${imgPath}"
+          src="${imgPath || ''}"
           alt="${person.name}"
-          class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange object-cover"
+          class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange object-cover ${showFallback}"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
-        <div class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange bg-gradient-to-br from-brag-search-bg to-brag-card-border items-center justify-center text-xl hidden">
+        <div class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange bg-gradient-to-br from-brag-search-bg to-brag-card-border items-center justify-center text-xl ${fallbackDisplay}">
           ${person.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
         </div>
         <div>

@@ -12,8 +12,8 @@ A /brag page is a page on your personal website where you share what you're prou
 
 1. Create a `/brag` page on your personal website.
 2. Fork this repo.
-3. Add your info to `data/people.json`.
-4. Add your photo to `public/images/people/{key}.jpg`.
+3. Add your info to `data/people.json`. Set the `image` field to the filename of your photo.
+4. Add your photo to `public/images/people/`.
 5. Open a pull request.
 
 ## Development

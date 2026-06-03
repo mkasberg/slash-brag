@@ -1,25 +1,15 @@
 [
   {
-    "key": "mike-kasberg",
-    "name": "Mike Kasberg",
-    "tagline": "Staff Software Engineer at Strava",
-    "city": "Denver",
-    "state": "Colorado",
-    "country": "United States",
-    "created": "2025-01-15",
-    "updated": "2025-06-01",
-    "url": "https://mikekasberg.com/brag"
-  },
-  {
     "key": "aaron-francis",
     "name": "Aaron Francis",
     "tagline": "Co-founder of Try Hard Studios",
     "city": "Dallas",
     "state": "Texas",
     "country": "United States",
-    "created": "2025-02-10",
-    "updated": "2025-06-01",
-    "url": "https://aaronfrancis.com/brag"
+    "created": "2026-06-02",
+    "updated": "2026-06-02",
+    "url": "https://aaronfrancis.com/tuple",
+    "image": "aaron-francis.jpg"
   },
   {
     "key": "clay-bitner",
@@ -28,8 +18,19 @@
     "city": "San Francisco",
     "state": "California",
     "country": "United States",
-    "created": "2025-03-01",
-    "updated": "2025-05-15",
-    "url": "https://claybitner.com/brag"
+    "created": "2026-06-02",
+    "updated": "2026-06-02",
+    "url": "https://claybitner.com/brag",
+    "image": "clay-bitner.jpg"
+  },
+  {
+    "key": "nydndr",
+    "name": "Dandara",
+    "tagline": "Product Designer",
+    "city": "Belo Horizonte",
+    "country": "Brazil",
+    "created": "2026-06-02",
+    "updated": "2026-06-02",
+    "url": "https://www.adandara.com/brag"
   }
 ]
