@@ -10,7 +10,7 @@ export default {
         'brag-card-hover': '#f4a261',
         'brag-text': '#e8e8ec',
         'brag-text-muted': '#a0a0b0',
-        'brag-text-dim': '#6a6a80',
+        'brag-text-dim': '#8a8a9e',
         'brag-search-bg': '#1a1a2e',
         'brag-search-border': '#2a2a4e',
         'brag-gold': '#ffd166',
