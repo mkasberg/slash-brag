@@ -64,11 +64,12 @@ function filter(query) {
   const q = query.toLowerCase().trim();
   if (!q) return people;
   return people.filter(p =>
-    p.name.toLowerCase().includes(q) ||
-    p.tagline.toLowerCase().includes(q) ||
-    p.city.toLowerCase().includes(q) ||
-    p.state.toLowerCase().includes(q) ||
-    p.country.toLowerCase().includes(q)
+    (p.name || '').toLowerCase().includes(q) ||
+    (p.tagline || '').toLowerCase().includes(q) ||
+    (p.city || '').toLowerCase().includes(q) ||
+    (p.state || '').toLowerCase().includes(q) ||
+    (p.country || '').toLowerCase().includes(q) ||
+    (p.url || '').toLowerCase().includes(q)
   );
 }
 
