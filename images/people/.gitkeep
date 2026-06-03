@@ -1,0 +1,2 @@
+# This directory holds profile photos.
+# Photos are named {key}.jpg where key matches the entry in data/people.json.
