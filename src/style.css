@@ -9,7 +9,23 @@ body {
 }
 
 .brag-gradient {
-  background: linear-gradient(135deg, #ffd166 0%, #f4a261 30%, #e76f51 60%, #ff6b6b 100%);
+  background: linear-gradient(
+    125deg,
+    #e76f51 0%,
+    #f4a261 10%,
+    #ffecd2 14%,
+    #f4a261 18%,
+    #e76f51 30%,
+    #ff6b6b 42%,
+    #ffd166 50%,
+    #fff8e7 53%,
+    #ffd166 56%,
+    #f4a261 65%,
+    #e76f51 75%,
+    #ffecd2 82%,
+    #f4a261 86%,
+    #ff6b6b 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
