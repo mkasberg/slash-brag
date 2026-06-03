@@ -2,7 +2,7 @@
 
 A directory of personal brag pages.
 
-**Live site:** [slashbrag.com](https://slashbrag.com)
+**Live site:** [https://mkasberg.github.io/slash-brag/](https://mkasberg.github.io/slash-brag/)
 
 ## What is a /brag page?
 
