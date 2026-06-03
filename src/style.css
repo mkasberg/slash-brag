@@ -14,3 +14,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+code {
+  @apply bg-brag-card px-1.5 py-0.5 rounded text-sm text-brag-text;
+}
