@@ -38,14 +38,14 @@
 
 ```json
 {
-  "key": "mike-kasberg",
+  "key": "mkasberg",
   "name": "Mike Kasberg",
   "tagline": "Staff Software Engineer at Strava",
   "city": "Denver",
   "state": "Colorado",
   "country": "United States",
-  "created": "2025-01-15",
-  "updated": "2025-06-01",
+  "created": "2026-06-02",
+  "updated": "2026-06-02",
   "url": "https://mikekasberg.com/brag"
 }
 ```
@@ -126,7 +126,7 @@ All entries live in `data/people.json` (an array of the above objects). The buil
 │   └── people.json
 ├── images/
 │   └── people/
-│       ├── mike-kasberg.jpg
+│       ├── mkasberg.jpg
 │       ├── aaron-francis.jpg
 │       └── ...
 ├── src/
@@ -146,7 +146,7 @@ All entries live in `data/people.json` (an array of the above objects). The buil
 ## Tech Stack
 
 - **Build tool:** Vite
-- **Styling:** Tailwind CSS + custom CSS for the gradient header and dark theme
+- **Styling:** Tailwind CSS (port gradient header & dark theme to Tailwind)
 - **Fonts:** Google Fonts (Outfit, DM Sans)
 - **Runtime:** Vanilla JS — no framework
 
@@ -169,6 +169,8 @@ All entries live in `data/people.json` (an array of the above objects). The buil
 
 Submission instructions are in the repo README and linked from the /about page.
 
+Include a GitHub PR template to add a brag page.
+
 ---
 
 ## Non-Goals / Out of Scope
@@ -186,6 +188,11 @@ Submission instructions are in the repo README and linked from the /about page.
 ## Open Questions / Future Considerations
 
 - Should we enforce a max image size for PRs? (e.g., 200KB, 400x400px)
+  - Yes, max size 200x200px.
 - Should we add a "random brag page" link like nownownow.com?
+  - Yes
 - Should we group by country/region on the homepage?
+  - No
 - Should `updated` be auto-populated from git history, or manually maintained?
+  - Manual for now.
+  
