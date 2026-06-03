@@ -34,10 +34,10 @@ function render(entries) {
         <img
           src="${imgPath}"
           alt="${person.name}"
-          class="w-14 h-14 rounded-full border-2 border-brag-orange object-cover"
+          class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange object-cover"
           onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
         >
-        <div class="w-14 h-14 rounded-full border-2 border-brag-orange bg-gradient-to-br from-brag-search-bg to-brag-card-border items-center justify-center text-xl hidden">
+        <div class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange bg-gradient-to-br from-brag-search-bg to-brag-card-border items-center justify-center text-xl hidden">
           ${person.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
         </div>
         <div>
