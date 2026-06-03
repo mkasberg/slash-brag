@@ -5,8 +5,6 @@
     "city": "Dallas",
     "state": "Texas",
     "country": "United States",
-    "created": "2026-06-02",
-    "updated": "2026-06-02",
     "url": "https://aaronfrancis.com/tuple",
     "image": "aaron-francis.jpg"
   },
@@ -16,8 +14,6 @@
     "city": "San Francisco",
     "state": "California",
     "country": "United States",
-    "created": "2026-06-02",
-    "updated": "2026-06-02",
     "url": "https://claybitner.com/brag",
     "image": "clay-bitner.jpg"
   },
@@ -26,8 +22,6 @@
     "tagline": "Product Designer",
     "city": "Belo Horizonte",
     "country": "Brazil",
-    "created": "2026-06-02",
-    "updated": "2026-06-02",
     "url": "https://www.adandara.com/brag",
     "image": "dandara.jpg"
   }
