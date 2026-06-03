@@ -1,6 +1,5 @@
 [
   {
-    "key": "aaron-francis",
     "name": "Aaron Francis",
     "tagline": "Co-founder of Try Hard Studios",
     "city": "Dallas",
@@ -12,7 +11,6 @@
     "image": "aaron-francis.jpg"
   },
   {
-    "key": "clay-bitner",
     "name": "Clay Bitner",
     "tagline": "Product Designer",
     "city": "San Francisco",
@@ -24,7 +22,6 @@
     "image": "clay-bitner.jpg"
   },
   {
-    "key": "nydndr",
     "name": "Dandara",
     "tagline": "Product Designer",
     "city": "Belo Horizonte",
