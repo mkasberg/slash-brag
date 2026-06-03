@@ -2,6 +2,16 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import fs from 'fs';
 
+let people;
+const peoplePath = resolve(import.meta.dirname, 'data/people.json');
+try {
+  people = JSON.parse(fs.readFileSync(peoplePath, 'utf-8'));
+} catch (err) {
+  throw new Error(
+    `Failed to load or parse data/people.json at ${peoplePath}: ${err.message}`
+  );
+}
+
 export default defineConfig({
   root: 'src',
   build: {
@@ -9,8 +19,8 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
-        about: resolve(__dirname, 'src/about.html'),
+        main: resolve(import.meta.dirname, 'src/index.html'),
+        about: resolve(import.meta.dirname, 'src/about.html'),
       },
     },
   },
@@ -18,9 +28,8 @@ export default defineConfig({
     {
       name: 'inject-people-data',
       transformIndexHtml(html) {
-        const peoplePath = resolve(__dirname, 'data/people.json');
-        const people = JSON.parse(fs.readFileSync(peoplePath, 'utf-8'));
-        const scriptTag = `<script type="application/json" id="people-data">${JSON.stringify(people)}</script>`;
+        const safeJson = JSON.stringify(people).replace(/</g, '\\u003c');
+        const scriptTag = `<script type="application/json" id="people-data">${safeJson}</script>`;
         return html.replace('<!-- PEOPLE_DATA -->', scriptTag);
       },
     },
