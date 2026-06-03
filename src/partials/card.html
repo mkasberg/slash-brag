@@ -1,0 +1,22 @@
+<a href="{{url}}" target="_blank" data-search="{{search}}" data-country="{{country}}" class="block bg-brag-card border border-brag-card-border rounded-2xl p-8 transition-all duration-200 hover:border-brag-orange hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(244,162,97,0.15)]">
+  <div class="flex items-center gap-4 mb-3">
+    <img
+      src="{{imageSrc}}"
+      alt="{{name}}"
+      class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange object-cover {{imageClass}}"
+      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+    >
+    <div class="w-14 h-14 shrink-0 rounded-full border-2 border-brag-orange bg-gradient-to-br from-brag-search-bg to-brag-card-border items-center justify-center text-2xl {{fallbackClass}}">
+      {{initials}}
+    </div>
+    <div>
+      <h3 class="font-heading font-bold text-2xl text-white">{{name}}</h3>
+      <p class="text-brag-text-muted text-base">{{tagline}}</p>
+    </div>
+  </div>
+  <p class="text-brag-text-dim text-sm flex items-center gap-1.5">
+    <span>📍</span>
+    <span>{{location}}</span>
+  </p>
+  <p class="text-brag-orange text-sm mt-2 truncate">{{displayUrl}}</p>
+</a>
