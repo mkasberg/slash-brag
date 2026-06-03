@@ -15,6 +15,7 @@ function loadPeople() {
 }
 
 export default defineConfig({
+  base: '/slash-brag/',
   root: 'src',
   publicDir: '../public',
   build: {

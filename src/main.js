@@ -26,7 +26,7 @@ function render(entries) {
     card.target = '_blank';
     card.className = 'block bg-brag-card border border-brag-card-border rounded-2xl p-8 transition-all duration-200 hover:border-brag-orange hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(244,162,97,0.15)]';
 
-    const imgPath = person.image ? `/images/people/${person.image}` : null;
+    const imgPath = person.image ? `${import.meta.env.BASE_URL}images/people/${person.image}` : null;
     const location = [person.city, person.state, person.country].filter(Boolean).join(', ');
     const displayUrl = person.url.replace(/^https?:\/\//, '');
 
