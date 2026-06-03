@@ -3,12 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>/BRAG — Brag Document Directory</title>
-  <link rel="stylesheet" href="style.css">
+  <title>/BRAG — A directory of personal brag pages</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="min-h-screen">
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <header class="text-center mb-12">
+      <h1 class="font-heading font-black text-7xl md:text-8xl tracking-tight brag-gradient drop-shadow-[0_0_40px_rgba(244,162,97,0.3)]">
+        /BRAG
+      </h1>
+      <p class="text-brag-text-muted text-lg mt-4">A directory of personal brag pages. What are you proud of?</p>
+    </header>
+
+    <!-- Search -->
+    <div class="max-w-lg mx-auto mb-8">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search by name, location, or tagline..."
+        class="w-full bg-brag-search-bg border border-brag-search-border rounded-xl px-5 py-3.5 text-brag-text placeholder-brag-text-dim focus:outline-none focus:border-brag-orange transition-colors"
+      >
+    </div>
+
+    <!-- Stats -->
+    <p id="stats" class="text-center text-brag-text-dim text-sm mb-8"></p>
+
+    <!-- Grid -->
+    <div id="grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+
+    <!-- Empty state -->
+    <div id="empty" class="hidden text-center py-16">
+      <p class="text-brag-text-muted text-lg">No brags found.</p>
+      <a href="https://github.com/mkasberg/slash-brag" target="_blank" class="text-brag-orange hover:underline mt-2 inline-block">Be the first to add yours!</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-16 pt-8 border-t border-brag-card-border text-center text-brag-text-dim text-sm">
+      <a href="./about.html" class="text-brag-orange hover:underline">About</a>
+      <span class="mx-2">·</span>
+      <a href="https://github.com/mkasberg/slash-brag" target="_blank" class="text-brag-orange hover:underline">GitHub</a>
+      <span class="mx-2">·</span>
+      <a href="https://github.com/mkasberg/slash-brag#how-to-add-yours" target="_blank" class="text-brag-orange hover:underline">Add yours</a>
+    </footer>
+  </div>
+
   <!-- PEOPLE_DATA -->
-  <h1>/BRAG</h1>
-  <p>Coming soon.</p>
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
