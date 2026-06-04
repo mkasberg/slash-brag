@@ -5,15 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>/BRAG — A directory of personal brag pages</title>
   <link rel="stylesheet" href="./style.css">
+  <script>
+    (function() {
+      const mode = localStorage.getItem('brag-theme') || 'system';
+      const isDark = mode === 'dark' || (mode === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+      if (isDark) document.documentElement.classList.add('dark');
+    })();
+  </script>
 </head>
 <body class="min-h-screen">
   <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Theme Switcher -->
+    <div class="flex justify-end mb-4">
+      <div class="relative inline-flex rounded-full bg-gray-200 dark:bg-brag-card h-9 w-32">
+        <div id="theme-pill" class="absolute top-1 bottom-1 w-1/3 rounded-full bg-white dark:bg-brag-card-border transition-all duration-200 ease-out" style="transform: translateX(0%);"></div>
+        <button data-mode="system" aria-label="System theme" class="relative z-10 flex-1 flex items-center justify-center h-full text-sm rounded-full">🌓</button>
+        <button data-mode="light" aria-label="Light theme" class="relative z-10 flex-1 flex items-center justify-center h-full text-sm rounded-full">☀️</button>
+        <button data-mode="dark" aria-label="Dark theme" class="relative z-10 flex-1 flex items-center justify-center h-full text-sm rounded-full">🌙</button>
+      </div>
+    </div>
+
     <!-- Header -->
     <header class="text-center mb-12">
       <h1 class="font-heading font-black text-8xl md:text-9xl brag-gradient drop-shadow-[0_0_40px_rgba(244,162,97,0.3)]">
         /BRAG
       </h1>
-      <p class="text-brag-text-muted text-xl mt-4">A directory of personal brag pages. What are you proud of?</p>
+      <p class="text-gray-600 dark:text-brag-text-muted text-xl mt-4">A directory of personal brag pages. What are you proud of?</p>
     </header>
 
     <!-- Search -->
@@ -23,12 +40,12 @@
         id="search"
         aria-label="Search brag pages"
         placeholder="Search by name, location, or URL..."
-        class="w-full bg-brag-search-bg border border-brag-search-border rounded-xl px-5 py-3.5 text-brag-text placeholder-brag-text-dim focus:outline-none focus:border-brag-orange transition-colors"
+        class="w-full bg-gray-100 dark:bg-brag-search-bg border border-gray-300 dark:border-brag-search-border rounded-xl px-5 py-3.5 text-gray-900 dark:text-brag-text placeholder-gray-400 dark:placeholder-brag-text-dim focus:outline-none focus:border-brag-orange transition-colors"
       >
     </div>
 
     <!-- Stats -->
-    <p id="stats" class="text-center text-brag-text-dim text-base mb-8"><!-- STATS --></p>
+    <p id="stats" class="text-center text-gray-400 dark:text-brag-text-dim text-base mb-8"><!-- STATS --></p>
 
     <!-- Grid -->
     <div id="grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -37,12 +54,12 @@
 
     <!-- Empty state -->
     <div id="empty" class="hidden text-center py-16">
-      <p class="text-brag-text-muted text-xl">No brags found.</p>
+      <p class="text-gray-600 dark:text-brag-text-muted text-xl">No brags found.</p>
       <a href="https://github.com/mkasberg/slash-brag" target="_blank" rel="noopener noreferrer" class="text-brag-orange hover:underline mt-2 inline-block">Be the first to add yours!</a>
     </div>
 
     <!-- Footer -->
-    <footer class="mt-16 pt-8 border-t border-brag-card-border text-center text-brag-text-dim text-sm">
+    <footer class="mt-16 pt-8 border-t border-gray-200 dark:border-brag-card-border text-center text-gray-400 dark:text-brag-text-dim text-sm">
       <a href="./about.html" class="text-brag-orange hover:underline">About</a>
       <span class="mx-2">·</span>
       <a href="https://github.com/mkasberg/slash-brag" target="_blank" rel="noopener noreferrer" class="text-brag-orange hover:underline">GitHub</a>
